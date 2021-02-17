@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CubeTimer</title>
+		
+		<meta charset="UTF-8">
+		<meta name="description" content="A simple, functional speedsolving timer.">
+		<meta name="keywords" content="Rubik's, Timer, Cubing, Speedcubing">
+		<meta name="author" content="Thomas Bruce">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link type="text/css" rel="stylesheet" href="style/style.css">
+		<script type="text/javascript" src="js/timer.js"></script>
+	</head>
+	<body onKeypress="timer_obj.toggle()">
+			<div id="scrambles" ></div>
+			<h1 id="time">00:00.000</h1>
+			<p class="hint">press any key to start or stop timer</p>
+			<script>
+				var timer_obj = new Timer(
+											document.getElementById('time'),
+											document.getElementById('scrambles')
+										  );
+				timer_obj.scramble();
+			</script>
+	</body>
+</html>
